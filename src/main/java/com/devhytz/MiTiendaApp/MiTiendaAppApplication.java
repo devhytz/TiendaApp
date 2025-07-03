@@ -1,4 +1,4 @@
-package com.devhytz.MiTiendaApp;
+package com.devhytz.mitiendaapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
