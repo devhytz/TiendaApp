@@ -10,4 +10,6 @@ public class SaludoController {
     public String saludo(){
         return "Hola desde Spring Boot!";
     }
+
+    
 }
