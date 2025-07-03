@@ -22,4 +22,18 @@ public class Producto {
         this.precio = copia.precio;
         this.stock = copia.stock;
     }
+
+    //* Getters para cada atributo de clase
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
 }
