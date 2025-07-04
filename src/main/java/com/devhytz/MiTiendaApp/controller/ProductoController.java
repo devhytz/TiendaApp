@@ -3,6 +3,7 @@ package com.devhytz.mitiendaapp.controller;
 import com.devhytz.mitiendaapp.model.*;
 import com.devhytz.mitiendaapp.service.*;
 
+import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ public class ProductoController {
     }
 
     @GetMapping("/api/productos")
-    public void listaProductos() {
-        productoService.obtenerTodos();
+    public List<Producto> listaProductos() {
+        return productoService.obtenerTodos();
     }
 }

@@ -1,4 +1,4 @@
-package com.devhytz.repository;
+package com.devhytz.mitiendaapp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
