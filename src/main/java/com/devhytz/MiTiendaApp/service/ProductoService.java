@@ -2,8 +2,10 @@ package com.devhytz.mitiendaapp.service;
 
 import java.util.List;
 
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 
+import com.devhytz.mitiendaapp.dto.ProductoDTO;
 import com.devhytz.mitiendaapp.model.Producto;
 import com.devhytz.mitiendaapp.repository.ProductoRepository;
 
@@ -27,4 +29,31 @@ public class ProductoService {
     public List<Producto> obtenerTodos() {
         return productoRepository.findAll();
     }
+
+    public boolean eliminarProductoPorId(Long id) {
+        if (productoRepository.existsById(id)) {
+            productoRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Producto editarProducto(Long id, ProductoDTO dto) {
+        Optional<Producto> productoOptional = productoRepository.findById(id);
+
+        if (productoOptional.isPresent()) {
+            Producto productoExistente = productoOptional.get();
+            productoExistente.setNombre(dto.getNombre());
+            productoExistente.setPrecio(dto.getPrecio());
+            productoExistente.setStock(dto.getStock());
+
+            return productoRepository.save(productoExistente);
+        }
+
+        return null;
+    }
+
+
+
 }

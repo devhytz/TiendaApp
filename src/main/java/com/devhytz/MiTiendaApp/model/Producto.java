@@ -49,4 +49,22 @@ public class Producto {
     public int getStock() {
         return stock;
     }
+
+    //* Stters para cada atributo de clase
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }
